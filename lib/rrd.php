@@ -2402,7 +2402,7 @@ function rrdtool_function_info($data_source_id) {
 	/* Execute rrdtool info command */
 	$cmd_line = ' info ' . $data_source_path;
 	$output = rrdtool_execute($cmd_line, RRDTOOL_OUTPUT_NULL, RRDTOOL_OUTPUT_STDOUT);
-	if (sizeof($output) == 0) {
+	if (strlen($output) == 0) {
 		return false;
 	}
 
